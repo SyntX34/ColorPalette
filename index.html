@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Color Palette Generator · Design Tool</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+    <a href="index.html" class="back-link">← Back to portfolio</a>
+
+    <div class="header">
+        <h1>🎨 Color Palette Generator</h1>
+        <p class="sub">Generate beautiful color palettes in one click. Copy hex codes instantly.</p>
+    </div>
+
+    <div class="controls">
+        <button class="btn-generate" id="generateBtn">✨ Generate New Palette</button>
+        <div class="control-group">
+            <label>Number of colors</label>
+            <select id="colorCount">
+                <option value="3">3 colors</option>
+                <option value="4" selected>4 colors</option>
+                <option value="5">5 colors</option>
+                <option value="6">6 colors</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label>Color mode</label>
+            <select id="colorMode">
+                <option value="random">Random</option>
+                <option value="monochrome">Monochrome</option>
+                <option value="analogous">Analogous</option>
+                <option value="complementary">Complementary</option>
+                <option value="triadic">Triadic</option>
+                <option value="pastel">Pastel</option>
+                <option value="vibrant">Vibrant</option>
+            </select>
+        </div>
+        <button class="btn-copy-all" id="copyAllBtn">📋 Copy All</button>
+    </div>
+
+    <div class="palette" id="paletteContainer"></div>
+
+    <div class="color-info" id="colorInfo">
+        <p>Click any color to copy its hex code. Hover for more info.</p>
+    </div>
+
+    <div class="history-section">
+        <div class="history-header">
+            <h3>📜 History</h3>
+            <button class="btn-clear-history" id="clearHistoryBtn">Clear</button>
+        </div>
+        <div id="historyContainer" class="history-grid">
+            <p class="empty-msg">No palettes saved yet. Generate one!</p>
+        </div>
+    </div>
+
+    <div class="footer-meta">
+        <span><span class="name">Dolraj Neupane</span> · samirneupane66@gmail.com</span>
+        <button class="dh-btn" onclick="window.open('https://digitalheroesco.com','_blank')">
+            Built for Digital Heroes
+        </button>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
